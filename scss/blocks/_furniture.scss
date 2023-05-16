@@ -1,0 +1,173 @@
+.furniture {
+	padding-top: 120px;
+	padding-bottom: 230px;
+	&__container {
+		position: relative;
+	}
+
+	&__top {
+		text-align: center;
+	}
+
+	&__title {
+		padding-bottom: 15px;
+	}
+
+	&__short-title {
+		font-size: 20px;
+		line-height: 1.5;
+	}
+
+	&__all {
+		margin-top: 50px;
+		padding: 13px 28px;
+		font-size: 18px;
+		line-height: 1.1667;
+		position: absolute;
+		right: 46%;
+	//	bottom: -70px;
+	}
+}
+
+.tabs-furniture {
+
+	&__header{
+		display: flex;
+		gap:110px;
+		padding: 50px 0;
+		@media(max-width:750px){
+			flex-wrap: wrap;
+			justify-content: center;
+			gap:50px;
+		}
+	}
+
+	&__search {
+		display: flex;
+	}
+
+	&__input {
+		height: 50px;
+		width: 265px;
+		margin-right: -50px;
+		background: #EFEFEF;
+		border-radius: 5px;
+		border: none;
+		font-size: 20px;
+		&::placeholder{
+			font-size: 20px;
+			line-height: 0.9;
+			color: $main-clr3;
+			font-weight: 400;
+			font-family: 'Roboto', sans-serif;
+			padding: 16px;
+		}
+	}
+
+	&__link {
+		cursor: pointer;
+		rect{
+			fill:$main-clr;
+			transition: fill 0.3s ease-in-out;
+		}
+		path{
+			stroke:white;
+			transition: stroke 0.3s ease-in-out;
+		}
+		&:hover{
+			rect{fill: white;}
+			path{stroke: $main-clr;}
+		}
+	}
+
+	&__nav {
+		gap: 30px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__button {
+		position: relative;
+		font-family: 'Roboto', sans-serif;
+		font-size: 20px;
+		line-height: 1.5;
+		color: $main-clr3;
+		cursor: pointer;
+		background-color: transparent;
+		transition: color 0.3s ease 0s;
+		border: none;
+		&.active{
+			color: $text;
+		}
+		&::after{
+			content:'';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			height: 1px;
+			background-color: $main-clr;
+			transition: width 0.3s ease 0s;
+		}
+		&:hover{
+			color: $text;
+			&::after{
+				width: 100%;
+			}
+		}
+	}
+
+	&__item {
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+}
+
+.item-tabs {
+	
+	&__items {
+		//display: grid;
+		//grid-template-columns: repeat(4, 1fr);
+		gap:30px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__item {
+		background: #F9F9F9;
+		border-radius: 5px;
+		width: 270px;
+		&:hover{
+			box-shadow: 8px 8px 20px rgba(39, 39, 43, 0.1);
+		}
+	}
+	&__top {
+		display: flex;
+		padding: 10px;
+		gap:60px;
+	}
+
+	&__name {
+		font-weight: 400;
+		font-size: 20px;
+	}
+
+	&__desc {
+		font-weight: 300;
+		font-size: 16px;
+		color: $light-txt;
+		padding-right: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+	}
+
+	&__button {
+		padding: 8px 13px;
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+}

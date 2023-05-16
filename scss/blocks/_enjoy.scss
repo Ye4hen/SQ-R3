@@ -1,0 +1,146 @@
+.enjoy {
+	padding-bottom: clamp(3.125rem, 1.339rem + 8.93vw, 9.375rem);
+	&__block{
+		position: relative;
+		display: flex;
+		@media(max-width:400px){
+			justify-content: center;
+			flex-direction: column-reverse;
+		}
+	}
+	&__socials {
+		flex: 0.2;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+		&:hover{
+			background: rgba(0, 0, 0, 0.15);
+			backdrop-filter: blur(15px);
+		}
+	}
+
+	&__socials-items {
+		padding-top: 250px;
+		padding-bottom: 345px;
+		padding-left: 55px;
+		padding-right: 225px;
+		
+		@media(max-width:990px){
+			padding-right: 125px;
+		}
+		@media(max-width:680px){
+			padding-right: 80px;
+		}
+		@media(max-width:500px){
+			padding-right: 55px;
+		}
+		@media(max-width:400px){
+			padding: 50px 55px;
+		}
+	}
+
+	&__socials-item {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		&:not(:last-child){
+			padding-bottom: 40px;
+		}
+		path{
+			stroke:#fff;
+		}		
+		svg{
+			&:hover path {
+				stroke: black;
+			}
+		}
+		
+	}
+
+	&__main {
+		flex: 0.8;
+		text-align: center;
+		margin-top: 160px;
+		margin-bottom: 265px;
+		padding: 40px 0;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+		&:hover{
+			background: linear-gradient(112.8deg, rgba(207, 207, 207, 0.26) 0%, rgba(207, 207, 207, 0.06) 92.87%);
+			backdrop-filter: blur(15px);
+		}
+		@media(max-width:610px){
+			padding: 40px 10px;
+		}
+		@media(max-width:400px){
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		font-family: 'Revalia', cursive;
+		font-weight: 400;
+		font-size: 36px;	
+		line-height: 1.25;
+		text-align: center;
+		color: $text;
+		padding-bottom: 25px;
+	}
+
+	&__text {
+		line-height: 1.15;
+		color: #fff;
+		text-align: center;
+	}
+
+	&__button {
+		padding: 13px 17px;
+		margin-top: 30px;
+	}
+
+	&__stats {
+		display: flex;
+		gap:80px;
+		justify-content: center;
+		margin-top: 40px;
+		flex-wrap: wrap;
+	}
+
+	&__item-number {
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 1.175;
+		text-align: center;
+		color: $text;
+		@media(max-width:650px){
+			font-size: 30px;
+		}
+	}
+
+	&__item-special {
+		display: flex;
+		gap:10px;
+	}
+
+	&__item-desc{
+		@media(max-width:650px){
+			font-size: 18px;
+		}
+	}
+}
+
+
+._ibg {
+
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		z-index: -10;
+	}
+}

@@ -1,0 +1,53 @@
+.service {
+
+	&__top {
+		padding-bottom: 45px;
+	}
+
+	&__title {
+		padding-bottom: 15px;
+	}
+
+	&__cards {
+		display: flex;
+		gap:30px;
+		flex-wrap: wrap;
+	}
+
+	&__card {
+		border-radius: 5px;
+		cursor: pointer;
+		padding: 12px 55px 12px 12px;
+		&:hover{
+			box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.05);
+		}
+	}
+
+	&__img {
+		&:hover{
+			rect{
+				fill:black;
+			}
+		}	
+	}
+
+	&__name {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1.15;
+		color: $text;
+		padding-top: 15px;
+		padding-bottom: 10px;
+	}
+
+	&__desc {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 1.5;
+		color: $light-txt;
+		width: 300px;
+		@media(max-width:400px){
+			display: contents;
+		}
+	}
+}
