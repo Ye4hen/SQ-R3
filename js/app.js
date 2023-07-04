@@ -63,8 +63,8 @@ const swiper = new Swiper('.swiper', {
 	//	loop: true,
 	// Navigation arrows
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.feedback-btn-next',
+		prevEl: '.feedback-btn-prev',
 	},
 	breakpoints: {
 		900: {

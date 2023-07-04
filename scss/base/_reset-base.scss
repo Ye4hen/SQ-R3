@@ -44,7 +44,6 @@ font-size: 1.12rem;
 color:$main-clr;
 font-family: 'Roboto', sans-serif;
 font-weight: 400;
-overflow-x: hidden;
 }
 [class*=__container]
 {
@@ -86,4 +85,8 @@ padding: 0px 15px;
 		left: -7px;
 		background: $text;
 	}
+}
+
+.wrapper{
+	overflow: clip;
 }

@@ -96,6 +96,7 @@
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	z-index: 10;
 }
 
 .swiper-button-next {
@@ -110,7 +111,7 @@
 }
 
 .simple-rating::before {
-	content: "⭐⭐⭐⭐⭐";
+	content: "★★★★★";
 	display: block;
 }
 
@@ -143,7 +144,7 @@
 }
 
 .simple-rating__label::before {
-	content: "⭐";
+	content: "★★★★★";
 	display: block;
 	transition: color 0.3s ease 0s;
 }
@@ -156,7 +157,7 @@
 .simple-rating__label:hover,
 .simple-rating__label:hover~.simple-rating__label,
 .simple-rating__label:checked~.simple-rating__label:hover {
-	color: #ffd300;
+	color: #f2ca04;
 }
 
 /*===========================================================================================*/
